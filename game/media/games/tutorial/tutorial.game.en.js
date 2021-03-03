@@ -29,11 +29,9 @@ undum.game.slideUpSpeed = 500
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation(
-        "<h1>Starting Out with Undum</h1>\
+        "<h1>Comienzo de un nuevo día</h1>\
         <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
-        <p>Welcome to the Undum tutorial. Undum is a tool for writing\
-        hypertext interactive fiction. It has some unique features\
-        and a visual design that encourages narrative games.</p>\
+        <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apaga la alarma y enciende la luz.</p>\
         \
         <p>Hypertext interactive fiction is the digital equivalent of the\
         Choose Your Own Adventure (CYOA) books that were popular in the\
@@ -485,5 +483,5 @@ undum.game.init = function(character, system) {
     character.qualities.luck = 0;
     character.qualities.novice = 1;
     character.qualities.inspiration = 0;
-    system.setCharacterText("<p>You are starting on an exciting journey.</p>");
+    system.setCharacterText("<p>Objetos que lleva encima:</p>");
 };
