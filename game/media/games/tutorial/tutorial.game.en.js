@@ -33,41 +33,20 @@ undum.game.situations = {
         <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
         <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apaga la alarma y enciende la luz.</p>\
         \
-        <p>Hypertext interactive fiction is the digital equivalent of the\
-        Choose Your Own Adventure (CYOA) books that were popular in the\
-        1980s. The story is told in chunks, and you select from a range\
-        of options to move it forward. Unlike the book form, however, the\
-        digital form gives you far more flexibility to tell rich stories\
-        and introduce more interesting game elements.</p>\
+        <p>Aquí se te pasa por la cabeza el primer dilema del día. <a href='telefono'>¿Coger el teléfono como cada mañana y consultar las notícias que están por venir?</a> o <a href='levantarte'>levantarte inmediatamente</a>.</p>\
         \
         <p class='transient'>Click <a href='hub'>this link to\
         continue...</a></p>"
     ),
-
-    // NB: The 'hub' situation which is the main list of topics, is
-    // defined wholly in the HTML file, and doesn't have an entry in
-    // the game.situations dictionary in this file.
-
-    // For variety, here we define a situation using the top-level
-    // Situation type. This is a neat approach to generate text by
-    // looking it up in the HTML document. For static text that makes
-    // more sense than writing it longhand.
-    
+    //Comienzo de la historia
     todo: new undum.SimpleSituation(
         "<p class='transient'>¿Desea recoger algún objeto más? Si o Continuar con la historia con estos objetos.</p>",
-        {
-            actions: {
-                'do-something': "<p>You carried out the action, well done.\
-                                 You'll notice that the links for this\
-                                 situation are still active. This means you\
-                                 can click to perform the action again.</p>"
-            }
-        }
     ),
-    situations: new undum.Situation({
+    // Menu elecciones.
+    // Paraguas
+    opcion1: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
-            
                 system.animateQuality(
                     'paraguas', character.qualities.paraguas+1
                 );
@@ -76,7 +55,8 @@ undum.game.situations = {
         optionText: "Paraguas",
         displayOrder: 1
     }),
-    links: new undum.Situation({
+    // Llaves de casa.
+    opcion2: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
             
@@ -88,7 +68,8 @@ undum.game.situations = {
         optionText: "Llaves de casa",
         displayOrder: 1
     }),
-    sticky: new undum.Situation({
+    // Llaves del coche.
+    opcion3: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
             
@@ -100,7 +81,8 @@ undum.game.situations = {
         optionText: "Llaves del coche",
         displayOrder: 1
     }),
-    progress: new undum.Situation({
+    // Nota de la compra
+    opcion4: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
             
@@ -112,7 +94,8 @@ undum.game.situations = {
         optionText: "Nota de la compra",
         displayOrder: 1
     }),
-    saving: new undum.Situation({
+    // Peine
+    opcion5: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
             
@@ -124,7 +107,8 @@ undum.game.situations = {
         optionText: "Peine",
         displayOrder: 1
     }),
-    last: new undum.Situation({
+    // Botella de agua
+    opcion6: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
             
@@ -136,80 +120,34 @@ undum.game.situations = {
         optionText: "Botella de agua",
         displayOrder: 1
     }),
+    //Continuar despues de coger objetos
+    continua: new undum.SimpleSituation(
+        {
+        enter: function(character, system, from) {
+            if(character.qualities.paraguas > 0){
+                system.write($("#opcion1").html());
+                
+            }else{
+                system.write($("#opcion2").html());
+            }
+            
+        }
+        }),
+    //Si coges el telefono desde la cama...
+    telefono: new undum.SimpleSituation(
+        "<p>Decides coger el telefono.</p>",
+        {
+            heading: "Telefono",
+        }
+    ),
+    //Si decides levantarte
+    levantarte: new undum.SimpleSituation(
+        "<p>Decides levantarte.</p>",
+        {
+            heading: "Levantarte",
+        }
+    )
     
-    oneshot: new undum.SimpleSituation(
-        "<p>Continuar historia.</p>",
-        {
-            actions: {
-                "one-time-action": "<p>As I said, one time actions are\
-                                   mostly used to describe something in\
-                                   more detail, where you don't want the\
-                                   same descriptive text repeated over and\
-                                   over</p>"
-            }
-        }
-    ),
-    "quality-types": new undum.SimpleSituation(
-        "<p>Not all the qualities in the character panel are displayed as\
-        numeric. Internally they are all numeric, but different qualities\
-        get to choose how to display themselves. So 'Luck', for example, is\
-        displayed as words (based on the FUDGE RPG's adjective scale),\
-        and 'Novice' is using just a check-mark.</p>\
-        \
-        <p>To see how Luck changes, try using this\
-        <a href='./luck-boost'>luck-boosting action</a> or this\
-        <a href='./luck-reduce'>luck-reducing action</a>. Notice that\
-        luck uses a numeric bonus when it runs out of words. There are a range\
-        of different display types provided with Undum, and you can easily\
-        add your own too.</p>\
-        \
-        <p>When you <a href='character-text'>leave this situation</a>,\
-        I'll set 'Novice' to zero. Watch\
-        the character panel, and you'll see that Novice decides it doesn't\
-        need to be displayed any more and will be removed. You will also see\
-        that when the last\
-        quality in a group is removed ('Novice' is in the 'Progress' group),\
-        then the group heading is also removed. You can tell Undum what\
-        group each quality belongs to, and what order they should be listed.\
-        <p>"
-    ),
-    "character-text": new undum.SimpleSituation(
-        "<h1>Character Text</h1>\
-        <p>Above the list of qualities is a short piece of text, called\
-        the character-text. This describes the character in some way. It\
-        can be set by any action or when entering or leaving a situation.\
-        It is just regular HTML content, as for all text in Undum. It can\
-        also contain Undum links, so this is another place you can put\
-        actions that the character can carry out over a long period of time.\
-        </p>\
-        <p class='transient'>Let's go back to the\
-        <a href='hub'>topic list</a>. As you do, I'll change the\
-        character text. Notice that it is highlighted, just the same as\
-        when a quality is altered.</p>",
-        {
-            exit: function(character, system, to) {
-                system.setCharacterText(
-                    "<p>We're nearing the end of the road.</p>"
-                );
-            }
-        }
-    ),
-    "boost-stamina": new undum.SimpleSituation(
-        "<p>\
-        <img src='media/games/tutorial/woodcut3.png' class='float_right'>\
-        The progress bar is also useful in situations where the\
-        character block is displaying just the whole number of a quality,\
-        whereas some action changes a fraction. If the quality is displaying\
-        the character's level, for example, you might want to show a progress\
-        bar to indicate how near the character is to levelling up.</p>\
-        \
-        <p>After a few seconds, the progress bar disappears, to keep the\
-        focus on the text. Undum isn't designed for games where a lot of\
-        statistic management is needed. If you want a change to be part\
-        of the permanent record of the game, then write it in text.</p>\
-        \
-        <p>Let's <a href='hub'>return to the topic list.</a></p>"
-        ),
 };
 
 // ---------------------------------------------------------------------------
