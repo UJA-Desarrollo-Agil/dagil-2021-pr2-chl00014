@@ -31,16 +31,30 @@ undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Comienzo de un nuevo día</h1>\
         <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
-        <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apaga la alarma y enciende la luz.</p>\
+        <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apaga la alarma y enciendes la luz.</p>\
         \
-        <p>Aquí se te pasa por la cabeza el primer dilema del día. <a href='telefono'>¿Coger el teléfono como cada mañana y consultar las notícias que están por venir?</a> o <a href='levantarte'>levantarte inmediatamente</a>.</p>\
-        \
-        <p class='transient'>Click <a href='hub'>this link to\
-        continue...</a></p>"
+        <p>Aquí se te pasa por la cabeza el primer dilema del día. <a href='telefono'>Coger el teléfono</a> como cada mañana y consultar las noticias o por el contrario, decides probar un nuevo método que has leido por internet que consiste en <a href='levantarte'>levantarte</a> inmediatamente de la cama.</p>"
     ),
-    //Comienzo de la historia
-    todo: new undum.SimpleSituation(
-        "<p class='transient'>¿Desea recoger algún objeto más? Si o Continuar con la historia con estos objetos.</p>",
+    //Si coges el telefono desde la cama...
+    telefono: new undum.SimpleSituation(
+        "<p>Decides coger el telefono, <br> por lo que, como cada mañana procedes a contestar mensajes y consultar las noticias, entre ellas la aplicación del tiempo y para tu sorpresa parece que con un 96% de probabilidad lloverá hoy.</p>\
+        <p>Después de estar un rato metido en la cama, decides levantarte, preparte un desayuno mientras que contestas correos y posteriormente pasas a darte una ducha.</p>\
+        <p>Cuando comienzas a realizar las prácticas de desarrollo ágil, entra tu madre en la habitación y te comenta que necesita que vayas a la tienda a comprar inmediatamente.</p>\
+        <p>Procedes a prepararte para salir.</p>\
+        <p class='transient'><a href='hub'>Escoge los objetos</a> que quieres llevar contigo.\</p>",
+        {
+            heading: "Telefono",
+        }
+    ),
+    //Si decides levantarte
+    levantarte: new undum.SimpleSituation(
+        "<p>Decides levantarte inmediatamente de la cama,<br> te preparas el desayuno y te das una ducha.</p>\
+        <p>Cuando comienzas a realizar las prácticas de desarrollo ágil, entra tu madre en la habitación y te comenta que necesita que vayas a la tienda a comprar inmediatamente.</p>\
+        <p>Procedes a prepararte para salir.</p>\
+        <p class='transient'><a href='hub'>Escoge los objetos</a> que quieres llevar contigo.\</p>",
+        {
+            heading: "Levantarte",
+        }
     ),
     // Menu elecciones.
     // Paraguas
@@ -120,34 +134,57 @@ undum.game.situations = {
         optionText: "Botella de agua",
         displayOrder: 1
     }),
-    //Continuar despues de coger objetos
-    continua: new undum.SimpleSituation(
+    //Sales de casa
+    salida_casa: new undum.SimpleSituation(
+        "<p>Sales de casa <br> andando camino al supermercado, toca decidir a cual prefieres ir,\
+        por un lado tienes un <a href='comprobacion_nota'>Mercadona</a> a 5 minutos de casa, es el más cercano y la opción más rapida ya que no quieres perder mucho tiempo para continuar con las prácticas,</p>\
+        <p>Por otro lado un <a href='comprobacion_nota'>Carrefour</a> a 15 minutos pero es donde tu madre te ha mandado que vayas.</p>",
+        {
+            heading: "Salida de casa",
+        }
+    ),
+    //Llegada a tienda y comprobación de nota
+    comprobacion_nota: new undum.SimpleSituation(
+        "<p class='transient'>Llegada a la tienda</p>",
         {
         enter: function(character, system, from) {
-            if(character.qualities.paraguas > 0){
-                system.write($("#opcion1").html());
+            if(character.qualities.notaCompra > 0){
+                system.write($("#notaSi").html());
                 
             }else{
-                system.write($("#opcion2").html());
+                system.write($("#notaNo").html());
             }
             
         }
         }),
-    //Si coges el telefono desde la cama...
-    telefono: new undum.SimpleSituation(
-        "<p>Decides coger el telefono.</p>",
+    //Salida de tienda y comprobación de paraguas
+    comprobacionParaguas: new undum.SimpleSituation(
+        "<p class='transient'>Camino a la tienda </p>",
         {
-            heading: "Telefono",
+        enter: function(character, system, from) {
+            if(character.qualities.paraguas > 0){
+                system.write($("#paraguiaSi").html());
+                
+            }else{
+                system.write($("#paraguiasNo").html());
+            }
+            
         }
-    ),
-    //Si decides levantarte
-    levantarte: new undum.SimpleSituation(
-        "<p>Decides levantarte.</p>",
+        }),
+    //Llegada a casa y comprobación de llaves
+    comprobacionllavesCasa: new undum.SimpleSituation(
+        "<p class='transient'>Llegada a casa</p>",
         {
-            heading: "Levantarte",
+        enter: function(character, system, from) {
+            if(character.qualities.paraguas > 0){
+                system.write($("#llaveSi").html());
+                
+            }else{
+                system.write($("#llavesNo").html());
+            }
+            
         }
-    )
-    
+        }),
 };
 
 // ---------------------------------------------------------------------------
