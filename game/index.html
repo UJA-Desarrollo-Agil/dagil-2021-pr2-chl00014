@@ -145,50 +145,56 @@
       </div>
       <div id="notaSi">
         <h1>Llegada al supermercado</h1>
-        <p class='transient'>1.</p>
+          <p>Entras al supermercado <br> y te metes la mano en el bolsillo en busca de la nota que te ha dado tu madre con los productos que necesita.</p>
+          <p>¡Menos mal que la he cogido!</p>
+          <p>Procedes a comprar lo necesario y pagar en caja. Cuando te encuentras a punto de salir de la tienda ves por los cristales de la puerta la fuerte tormenta que azota el parking del supermercado.</p>
+          <p><a href="comprobacion_paraguas">Procedes a salir fuera</a>.</p>
       </div>
       <div id="notaNo">
         <h1>Llegada al supermercado</h1>
-        <p class='transient'>2.</p>
+        <p>Entras al supermercado <br> y te metes la mano en el bolsillo en busca de la nota que te ha dado tu madre con los productos que necesita.</p>
+        <p>¡Pero como he podido olvidarla!</p>
+        <p>Intentas llamar a tu madre para que te diga que era lo que necesitaba pero como siempre, comunica ...</p>
+        <p>Asique se te ocurre la brillante idea de comprar lo que tu crees necesario.</p>
+        <p>Procedes a pagar en caja. Cuando te encuentras a punto de salir de la tienda ves por los cristales de la puerta la fuerte tormenta que azota el parking del supermercado.</p>
+        <p><a href="comprobacion_paraguas">Procedo a salir fuera</a>.</p>
       </div>
      <div id="paraguiaSi">
-        <h1>Sales de casa</h1>
-        <p class='transient'>1.</p>
+        <h1>Sales de la tienda</h1>
+        <p>Por suerte <br>o por precavido cogí el paraguas antes de salir de casa.</p>
+        <p>Continuo camino a casa con las bolsas y el paraguas.</p>
+        <p>Llego al portal, cierro el paraguas y dejo las bolsas en el suelo para <a href="comprobacion_llaves_casa">abrir la puerta.</a></p>
       </div>
       <div id="paraguiasNo">
-        <h1>Sales de casa</h1>
-        <p class='transient'>2.</p>
+        <h1>Sales de la tienda</h1>
+        <p>Por mala suerte <br>o por no informarte dejaste el paraguas en casa.</p>
+        <p>¡Tendría que consultar el tiempo antes de salir!</p>
+        <p>Cojo las bolsas con decisión y salgo a correr lo más rápido posible bajo la lluvia de <a href="comprobacion_llaves_casa">camino a casa.</a></p>
       </div>
-      <div id="s_saving">
-        <h1>Saving and Loading</h1>
-        <p>The only piece of the UI we haven't talked about is the
-          'Save' and 'Erase' buttons on the left panel. These are only
-          visible if your browser supports client-side data
-          storage. Clicking 'Save' stores your game, so you can pick
-          it up again later. There is currently no 'Load' button, the
-          game loads when the page loads. There is also no way to save
-          multiple games, and select which one you want to play. These
-          are both things I'd like to change in the future.
-        </p>
-        <p>
-          Potentially your game could generate huge amounts of
-          text. And that would be difficult to store client side
-          (there are unpredictable limits), especially when we move
-          towards having multiple save files. So instead Undum saves
-          your character as the list of links you clicked. Loading a
-          save-file consists of playing through your game again,
-          quickly. This is a beneficial approach for debugging too. It
-          means when you're polishing and correcting typos, you can
-          save and load the game and scroll through the transcript to
-          see your corrections. If we saved the text, your save file
-          would have the error in it and you'd have to manually replay
-          the game to see the correction.
-        </p>
-        <p class='transient'>
-          Let's return to the <a href='hub'>topic list</a>.
-        </p>
+      <div id="llavescasaSi">
+        <h1>Llegada a casa</h1>
+        <p>Dejo las bolsas en el suelo y procedo a buscar las llaves en mis bolsillos, ¡menos mal que las llevo encima!</p>
+        <p>Abres la puerta y <a href="comprobacion_final">entras</a>.</p>
       </div>
-
+      <div id="llavescasaNo">
+        <h1>Llegada a casa</h1>
+        <p>Dejo las bolsas en el suelo y procedo a buscar las llaves en mis bolsillos, ¡pero que cabeza, como he podido dejarlas dentro!</p>
+        <p>Toco al timbre esparando que haya alguien dentro.</p>
+        <p>Por suerte está mi hermana y puedo <a href="comprobacion_final">entrar</a>.</p>
+      </div>
+      <div id="correcto">
+        <p>Al entrar le doy a mi madre la bolsa con la compra, dejo el paraguas escurriendo y continuo con la práctica de desarrollo ágil.</p>
+      </div>
+      <div id="compraMal">
+        <p>Al entrar a casa dejo el paraguas escurriendo y le llevo a mi madre la bolsa con la compra incorrecta que he echo, le explico la situación y continuo con la práctica de desarrollo ágil con regomello por no llevarme la nota con la compra.</p>
+      </div>
+      <div id="mojado">
+        <p>Al entrar a casa le doy la compra a mi madre y me cambio la ropa y seco ya que he llegado chorreando, continuo con la práctica de desarrollo ágil y con una pulmonía.</p>
+      </div>
+      <div id="compraMal_y_mojado">
+        <p>Al entrar a casa le llevo a mi madre la bolsa con la compra incorrecta que he echo, le explico la situación y me cambio la ropa y seco ya que he llegado chorreando.</p>
+        <p>Continuo con la práctica de desarrollo ágil con regomello por no llevarme la nota con la compra y con una pulmonía.</p>
+      </div>
       <!-- Some situations defined entirely in the HTML -->
       <div id="hub" class="situation" data-choices="#topic"
            data-option-text="View Topic List">

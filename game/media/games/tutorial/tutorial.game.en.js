@@ -37,11 +37,11 @@ undum.game.situations = {
     ),
     //Si coges el telefono desde la cama...
     telefono: new undum.SimpleSituation(
-        "<p>Decides coger el telefono, <br> por lo que, como cada mañana procedes a contestar mensajes y consultar las noticias, entre ellas la aplicación del tiempo y para tu sorpresa parece que con un 96% de probabilidad lloverá hoy.</p>\
-        <p>Después de estar un rato metido en la cama, decides levantarte, preparte un desayuno mientras que contestas correos y posteriormente pasas a darte una ducha.</p>\
+        "<p>Decides coger el telefono, <br> por lo que, como cada mañana procedes a contestar mensajes y consultar las noticias, entre ellas la aplicación del tiempo y para tu sorpresa parece que con un 100% de probabilidad lloverá hoy.</p>\
+        <p>Después de estar un rato metido en la cama, decides levantarte, prepararte un desayuno mientras que contestas correos y posteriormente pasas a darte una ducha.</p>\
         <p>Cuando comienzas a realizar las prácticas de desarrollo ágil, entra tu madre en la habitación y te comenta que necesita que vayas a la tienda a comprar inmediatamente.</p>\
         <p>Procedes a prepararte para salir.</p>\
-        <p class='transient'><a href='hub'>Escoge los objetos</a> que quieres llevar contigo.\</p>",
+        <p class='transient'>Se te pasan por la mente <a href='hub'>varios objetos</a> que puedes llevar contigo.\</p>",
         {
             heading: "Telefono",
         }
@@ -51,7 +51,7 @@ undum.game.situations = {
         "<p>Decides levantarte inmediatamente de la cama,<br> te preparas el desayuno y te das una ducha.</p>\
         <p>Cuando comienzas a realizar las prácticas de desarrollo ágil, entra tu madre en la habitación y te comenta que necesita que vayas a la tienda a comprar inmediatamente.</p>\
         <p>Procedes a prepararte para salir.</p>\
-        <p class='transient'><a href='hub'>Escoge los objetos</a> que quieres llevar contigo.\</p>",
+        <p class='transient'>Se te pasan por la mente <a href='hub'>varios objetos</a> que puedes llevar contigo.\</p>",
         {
             heading: "Levantarte",
         }
@@ -136,7 +136,7 @@ undum.game.situations = {
     }),
     //Sales de casa
     salida_casa: new undum.SimpleSituation(
-        "<p>Sales de casa <br> andando camino al supermercado, toca decidir a cual prefieres ir,\
+        "<p>Sales de casa <br> camino al supermercado, toca decidir a cual prefieres ir,\
         por un lado tienes un <a href='comprobacion_nota'>Mercadona</a> a 5 minutos de casa, es el más cercano y la opción más rapida ya que no quieres perder mucho tiempo para continuar con las prácticas,</p>\
         <p>Por otro lado un <a href='comprobacion_nota'>Carrefour</a> a 15 minutos pero es donde tu madre te ha mandado que vayas.</p>",
         {
@@ -145,12 +145,11 @@ undum.game.situations = {
     ),
     //Llegada a tienda y comprobación de nota
     comprobacion_nota: new undum.SimpleSituation(
-        "<p class='transient'>Llegada a la tienda</p>",
+        "<p class='transient'></p>",
         {
         enter: function(character, system, from) {
             if(character.qualities.notaCompra > 0){
                 system.write($("#notaSi").html());
-                
             }else{
                 system.write($("#notaNo").html());
             }
@@ -158,8 +157,8 @@ undum.game.situations = {
         }
         }),
     //Salida de tienda y comprobación de paraguas
-    comprobacionParaguas: new undum.SimpleSituation(
-        "<p class='transient'>Camino a la tienda </p>",
+    comprobacion_paraguas: new undum.SimpleSituation(
+        "<p class='transient'></p>",
         {
         enter: function(character, system, from) {
             if(character.qualities.paraguas > 0){
@@ -172,19 +171,35 @@ undum.game.situations = {
         }
         }),
     //Llegada a casa y comprobación de llaves
-    comprobacionllavesCasa: new undum.SimpleSituation(
-        "<p class='transient'>Llegada a casa</p>",
+    comprobacion_llaves_casa: new undum.SimpleSituation(
+        "<p class='transient'></p>",
         {
         enter: function(character, system, from) {
-            if(character.qualities.paraguas > 0){
-                system.write($("#llaveSi").html());
+            if(character.qualities.llavesCasa > 0){
+                system.write($("#llavescasaSi").html());
                 
             }else{
-                system.write($("#llavesNo").html());
+                system.write($("#llavescasaNo").html());
             }
             
         }
         }),
+    //Conclusion final
+    comprobacion_final: new undum.SimpleSituation(
+        "<p class='transient'></p>",
+        {
+        enter: function(character, system, from) {
+            if(character.qualities.notaCompra <= 0 && character.qualities.paraguas <= 0){
+                system.write($("#compraMal_y_mojado").html());
+            }else if(character.qualities.notaCompra <= 0){
+                system.write($("#compraMal").html());
+            }else if(character.qualities.paraguas <= 0){
+                system.write($("#mojado").html());
+            }else{
+                system.write($("#correcto").html());
+            }
+        }
+        })
 };
 
 // ---------------------------------------------------------------------------
