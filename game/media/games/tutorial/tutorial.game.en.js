@@ -31,27 +31,25 @@ undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Comienzo de un nuevo día</h1>\
         <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
-        <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apaga la alarma y enciendes la luz.</p>\
+        <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apago la alarma y enciendo la luz.</p>\
         \
-        <p>Aquí se te pasa por la cabeza el primer dilema del día. <a href='telefono'>Coger el teléfono</a> como cada mañana y consultar las noticias o por el contrario, decides probar un nuevo método que has leido por internet que consiste en <a href='levantarte'>levantarte</a> inmediatamente de la cama.</p>"
+        <p>Aquí se me pasa por la cabeza el primer dilema del día. <a href='telefono'>Coger el teléfono</a> como cada mañana y consultar las noticias o por el contrario, decidir si probar un nuevo método que leí la noche anterior en internet que consiste en <a href='levantarte'>levantarte</a> inmediatamente de la cama sin mirar el telefono y tomar un vaso de agua previo al desayuno.</p>"
     ),
     //Si coges el telefono desde la cama...
     telefono: new undum.SimpleSituation(
-        "<p>Decides coger el telefono, <br> por lo que, como cada mañana procedes a contestar mensajes y consultar las noticias, entre ellas la aplicación del tiempo y para tu sorpresa parece que con un 100% de probabilidad lloverá hoy.</p>\
-        <p>Después de estar un rato metido en la cama, decides levantarte, prepararte un desayuno mientras que contestas correos y posteriormente pasas a darte una ducha.</p>\
-        <p>Cuando comienzas a realizar las prácticas de desarrollo ágil, entra tu madre en la habitación y te comenta que necesita que vayas a la tienda a comprar inmediatamente.</p>\
-        <p>Procedes a prepararte para salir.</p>\
-        <p class='transient'>Se te pasan por la mente <a href='hub'>varios objetos</a> que puedes llevar contigo.\</p>",
+        "<p>Decido coger el telefono, <br> por lo que, como cada mañana procedo a contestar mensajes y consultar las noticias relevantes del dia anterior y del que esta por venir, entre ellas la aplicación del tiempo y para mi sorpresa parece que con un 100% de probabilidad lloverá hoy.</p>\
+        <p>Después de estar un rato metido en la cama, decido levantarme, preparar el desayuno mientras que contesto correos y posteriormente pasar a darme una ducha.</p>\
+        <p>Cuando comienzo a realizar las prácticas de desarrollo ágil, entra mi madre en la habitación y me comenta que necesita que vaya a la tienda a comprar inmediatamente.</p>\
+        <p>Procedo a prepararme para salir. Se me pasan por la mente <a href='hub'>varios objetos</a> que puedo llevar conmigo.\</p>",
         {
             heading: "Telefono",
         }
     ),
     //Si decides levantarte
     levantarte: new undum.SimpleSituation(
-        "<p>Decides levantarte inmediatamente de la cama,<br> te preparas el desayuno y te das una ducha.</p>\
-        <p>Cuando comienzas a realizar las prácticas de desarrollo ágil, entra tu madre en la habitación y te comenta que necesita que vayas a la tienda a comprar inmediatamente.</p>\
-        <p>Procedes a prepararte para salir.</p>\
-        <p class='transient'>Se te pasan por la mente <a href='hub'>varios objetos</a> que puedes llevar contigo.\</p>",
+        "<p>Decido levantarme <br>inmediatamente de la cama, me preparo el desayuno y paso a darme una ducha.</p>\
+        <p>Cuando comienzo a realizar las prácticas de desarrollo ágil, entra mi madre en la habitación y me comenta que necesita que vaya a la tienda a comprar inmediatamente.</p>\
+        <p>Procedo a prepararme para salir. Se me pasan por la mente <a href='hub'>varios objetos</a> que puedo llevar conmigo.\</p>",
         {
             heading: "Levantarte",
         }
@@ -136,9 +134,9 @@ undum.game.situations = {
     }),
     //Sales de casa
     salida_casa: new undum.SimpleSituation(
-        "<p>Sales de casa <br> camino al supermercado, toca decidir a cual prefieres ir,\
-        por un lado tienes un <a href='comprobacion_nota'>Mercadona</a> a 5 minutos de casa, es el más cercano y la opción más rapida ya que no quieres perder mucho tiempo para continuar con las prácticas,</p>\
-        <p>Por otro lado un <a href='comprobacion_nota'>Carrefour</a> a 15 minutos pero es donde tu madre te ha mandado que vayas.</p>",
+        "<p>Salgo de casa <br> camino al supermercado, toca decidir a cual debería ir,\
+        por un lado tengo un <a href='comprobacion_nota'>Mercadona</a> a 5 minutos, es el más cercano y la opción más rapida ya que no debería perder mucho tiempo para continuar con la práctica.</p>\
+        <p>Por otro lado tengo un <a href='comprobacion_nota'>Carrefour</a> a 15 minutos, está más lejos pero es donde mi madre me ha mandado que vaya.</p>",
         {
             heading: "Salida de casa",
         }
