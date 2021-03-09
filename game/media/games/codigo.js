@@ -30,7 +30,7 @@ undum.game.slideUpSpeed = 500
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Comienzo de un nuevo día</h1>\
-        <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
+        <img src='media/games/imagenes/despertar.jpg' class='float_right' width='200' height='350'>\
         <p>Beep-beep! <br> suena el despertador, anunciando el comienzo de un nuevo día. Medio dormido apago la alarma y enciendo la luz.</p>\
         \
         <p>Aquí se me pasa por la cabeza el primer dilema del día. <a href='telefono'>Coger el teléfono</a> como cada mañana y consultar las noticias o por el contrario, decidir si probar un nuevo método que leí la noche anterior en internet que consiste en <a href='levantarte'>levantarte</a> inmediatamente de la cama sin mirar el telefono y tomar un vaso de agua previo al desayuno.</p>"
