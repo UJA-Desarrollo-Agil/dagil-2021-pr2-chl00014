@@ -82,7 +82,7 @@ ___Tablero la tercera semana de práctica___:
 ![Parece que la carga de la imagen ha fallado](/imagenes/medio2.png "Tablero la tercera semana")
 
 ___Tablero al finalizar la práctica___:
-![Parece que la carga de la imagen ha fallado](/imagenes/.png "Tablero al finalizar")
+![Parece que la carga de la imagen ha fallado](/imagenes/final.png "Tablero al finalizar")
 
 
 [SUBIR](#top)
