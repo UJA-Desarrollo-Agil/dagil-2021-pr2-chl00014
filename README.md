@@ -21,7 +21,11 @@ Desarrollado por Cristian Hidalgo Lozano.
 ## Descripción
 
 `Un viaje al supermercado` cuenta una historia ficticia en primera persona donde el protagonista (Persona que realiza la práctica) despierta y desde el primer momento usted está tomando las decisiones sobre el trascurso de la historia, afectando al futuro de ésta.
+
+
 Sucede un percance lo que hace que el protagonista deba salir de casa a comprar una serie de productos y volver lo antes posible para entregarlos.
+
+
 La historia cuenta con cuatro posibles finales distintos, todos ellos influenciados por las decisiones tomadas a lo largo de la historia.
 
 <a name="diagrama"></a>
@@ -31,6 +35,8 @@ A continuación se muestra un diagrama de flujo con las interacciones de la hist
 ![Parece que la carga de la imagen ha fallado](/imagenes/diagrama.png "Diagrama de flujo")
 
 Durante la historia serán clave los objetos que seleccione, dependiendo de estos el final será completamente distinto existiendo cuatro posibilidades. _Se podrán elegir tantos objetos como se desee_.
+
+
 Como se puede ver en el diagrama después de elegir una de las opciones (como puede ser el caso del telefono y levantarse) cada una de ellas proporcionará pistas distintas que cambiarán el trascurso de la historia.
 
 <a name="diseno"></a>
@@ -65,17 +71,17 @@ Captura de pantalla con la conexión realizada desde Telegram con el tablero de 
 
 A continuación, se muestran diferentes capturas de pantalla con el proceso evolutivo que ha tenido el tablero de Trello mientras se resolvía la práctica.
 
-Tablero al comienzo de la práctica:
+___Tablero al comienzo de la práctica___:
 ![Parece que la carga de la imagen ha fallado](/imagenes/inicio.png "Tablero al inicio")
 
-Tablero la segunda semana de práctica:
+___Tablero la segunda semana de práctica___:
 ![Parece que la carga de la imagen ha fallado](/imagenes/medio.png "Tablero la segunda semana")
 
-Tablero la tercera semana de práctica:
+___Tablero la tercera semana de práctica___:
 ![Parece que la carga de la imagen ha fallado](/imagenes/medio2.png "Tablero la tercera semana")
 
-Tablero al finalizar la práctica:
+___Tablero al finalizar la práctica___:
 ![Parece que la carga de la imagen ha fallado](/imagenes/.png "Tablero al finalizar")
 
 
-[Subir](#top)
+[SUBIR](#top)
