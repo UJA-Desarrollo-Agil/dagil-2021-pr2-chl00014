@@ -62,6 +62,7 @@ undum.game.situations = {
                 system.animateQuality(
                     'paraguas', character.qualities.paraguas+1
                 );
+            system.write($("#recojo_paraguas").html());
         },
         tags: ["topic"],
         optionText: "Paraguas",
@@ -73,8 +74,9 @@ undum.game.situations = {
             system.write($("#s_situations").html());
             
                 system.animateQuality(
-                    'llavesCasa', character.qualities.llavesCasa+1
+                    'llavesCasa', character.qualities.llavesCasa+1,
                 );
+            system.write($("#recojo_llavesdecasa").html());
         },
         tags: ["topic"],
         optionText: "Llaves de casa",
@@ -88,6 +90,7 @@ undum.game.situations = {
                 system.animateQuality(
                     'llavesCoche', character.qualities.llavesCoche+1
                 );
+            system.write($("#recojo_llavesdelcoche").html());
         },
         tags: ["topic"],
         optionText: "Llaves del coche",
@@ -101,6 +104,7 @@ undum.game.situations = {
                 system.animateQuality(
                     'notaCompra', character.qualities.notaCompra+1
                 );
+            system.write($("#recojo_notacompra").html());
         },
         tags: ["topic"],
         optionText: "Nota de la compra",
@@ -114,6 +118,7 @@ undum.game.situations = {
                 system.animateQuality(
                     'peine', character.qualities.peine+1
                 );
+            system.write($("#recojo_peine").html());
         },
         tags: ["topic"],
         optionText: "Peine",
@@ -127,6 +132,7 @@ undum.game.situations = {
                 system.animateQuality(
                     'botellaAgua', character.qualities.botellaAgua+1
                 );
+            system.write($("#recojo_botelladeagua").html());
         },
         tags: ["topic"],
         optionText: "Botella de agua",
