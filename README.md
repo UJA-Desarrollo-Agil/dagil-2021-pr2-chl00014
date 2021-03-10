@@ -2,7 +2,11 @@
 # Un viaje al supermercado
 
 Se trata de un ejemplo de juego conversacional creado en `Undum` para la asignatura Desarrollo Ágil.
+
+
 Desarrollado por Cristian Hidalgo Lozano.
+
+
 3º Ingeniería del software - Ingeniería informática.
 
 ## Índice
