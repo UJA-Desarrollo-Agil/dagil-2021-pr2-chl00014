@@ -4,10 +4,11 @@
 Se trata de un ejemplo de juego conversacional creado en `Undum` para la asignatura Desarrollo Ágil.
 
 
-Desarrollado por Cristian Hidalgo Lozano.
+Desarrollado por Cristian Hidalgo Lozano - _chl00014@red.uajen.es_.
 
 
 3º Ingeniería del software - Ingeniería informática.
+
 
 ## Índice
 * [Descripción](#descripcion)
