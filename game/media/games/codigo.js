@@ -40,7 +40,7 @@ undum.game.situations = {
         "<p>Decido coger el telefono, <br> por lo que, como cada mañana procedo a contestar mensajes y consultar las noticias relevantes del dia anterior y del que esta por venir, entre ellas la aplicación del tiempo y para mi sorpresa parece que con un 100% de probabilidad lloverá hoy.</p>\
         <p>Después de estar un rato metido en la cama, decido levantarme, preparar el desayuno mientras que contesto correos y posteriormente pasar a darme una ducha.</p>\
         <p>Cuando comienzo a realizar las prácticas de desarrollo ágil, entra mi madre en la habitación y me comenta que necesita que vaya a la tienda a comprar inmediatamente.</p>\
-        <p>Procedo a prepararme para salir. Se me pasan por la mente <a href='hub'>varios objetos</a> que puedo llevar conmigo.\</p>",
+        <p>Procedo a prepararme para salir. Se me pasan por la mente <a href='hub2'>varios objetos</a> que puedo llevar conmigo.\</p>",
         {
             heading: "Telefono",
         }
@@ -49,7 +49,7 @@ undum.game.situations = {
     levantarte: new undum.SimpleSituation(
         "<p>Decido levantarme <br>inmediatamente de la cama, me preparo el desayuno y paso a darme una ducha.</p>\
         <p>Cuando comienzo a realizar las prácticas de desarrollo ágil, entra mi madre en la habitación y me comenta que necesita que vaya a la tienda a comprar inmediatamente.</p>\
-        <p>Procedo a prepararme para salir. Se me pasan por la mente <a href='hub'>varios objetos</a> que puedo llevar conmigo.\</p>",
+        <p>Procedo a prepararme para salir. Se me pasan por la mente <a href='hub2'>varios objetos</a> que puedo llevar conmigo.\</p>",
         {
             heading: "Levantarte",
         }
